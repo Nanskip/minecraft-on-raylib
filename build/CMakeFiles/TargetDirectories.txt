@@ -1,0 +1,3 @@
+C:/Users/Nanskip/GitHub/Minecraft/build/CMakeFiles/Minecraft.dir
+C:/Users/Nanskip/GitHub/Minecraft/build/CMakeFiles/edit_cache.dir
+C:/Users/Nanskip/GitHub/Minecraft/build/CMakeFiles/rebuild_cache.dir
