@@ -1,1 +1,0 @@
- "C:/Users/Nanskip/GitHub/Minecraft/raylib-5.5_win64_mingw-w64/lib/libraylib.a" -lwinmm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
