@@ -10,11 +10,17 @@ set(RAYLIB_PATH "${CMAKE_SOURCE_DIR}/raylib-5.5_win64_mingw-w64")
 set(RAYLIB_INCLUDE_PATH "${RAYLIB_PATH}/include")
 set(RAYLIB_LIB_PATH "${RAYLIB_PATH}/lib")
 
-# Add Raylib include directory
-include_directories(${RAYLIB_INCLUDE_PATH})
+# Add include directories (Raylib + Perlin)
+include_directories(
+    ${RAYLIB_INCLUDE_PATH}
+    ${CMAKE_SOURCE_DIR}/libraries
+)
 
-# Add executable
-add_executable(${PROJECT_NAME} src/main.c)
+# Add executable with both main and perlin source files
+add_executable(${PROJECT_NAME}
+    src/main.c
+    libraries/perlin.c
+)
 
 # Link Raylib and required Windows libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE 
@@ -23,4 +29,4 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 )
 
 # Copy resources to build directory
-file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_BINARY_DIR}) 
+file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_BINARY_DIR})
